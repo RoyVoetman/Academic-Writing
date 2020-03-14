@@ -1,0 +1,105 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt]{scrreprt}
+
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{mathpazo} % Palatino font
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{scrlayer-scrpage}
+\usepackage[explicit]{titlesec}
+\usepackage{hyperref}
+
+\input{config.tex}
+
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\titleformat{\chapter}[display]
+  {\normalfont\scshape\Huge}
+  {\hspace*{-70pt}\thechapter.~#1}
+  {-15pt}
+  {\hspace*{-110pt}\rule{\dimexpr\textwidth+80pt\relax}{3pt}\Huge}
+\titleformat{name=\chapter,numberless}[display]
+  {\normalfont\scshape\Huge}
+  {\hspace*{-70pt}#1}
+  {-15pt}
+  {\hspace*{-110pt}\rule{\dimexpr\textwidth+80pt\relax}{3pt}\Huge}
+\titlespacing*{\chapter}{0pt}{0pt}{30pt}
+
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black
+}
+
+\clearpairofpagestyles
+\ohead[\textcolor{gray}{\thepage}]{\textcolor{gray}{\thepage}}
+\ihead[\textcolor{gray}{\head}]{\textcolor{gray}{\head}}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+\pagenumbering{Roman}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\input{chapters/main/I_titlepage.tex}
+
+%----------------------------------------------------------------------------------------
+%   INFORMATION PAGE
+%----------------------------------------------------------------------------------------
+
+\input{chapters/main/II_info.tex}
+
+%----------------------------------------------------------------------------------------
+%   REVISION HISTORY
+%----------------------------------------------------------------------------------------
+
+\input{chapters/main/III_history.tex}
+
+%----------------------------------------------------------------------------------------
+%   PREFACE
+%----------------------------------------------------------------------------------------
+
+\input{chapters/main/IV_preface.tex}
+
+%----------------------------------------------------------------------------------------
+%   TOC
+%----------------------------------------------------------------------------------------
+
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%   CHAPTERS
+%----------------------------------------------------------------------------------------
+\pagenumbering{arabic}
+
+\input{chapters/introduction.tex}
+
+\input{chapters/problem_characterization.tex}
+
+\input{chapters/problem_identification.tex}
+
+\input{chapters/theoretical_framework.tex}
+
+\input{chapters/methodology.tex}
+
+\input{chapters/conclusions.tex}
+
+\input{chapters/recommendations.tex}
+
+\input{chapters/bibliography.tex}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
