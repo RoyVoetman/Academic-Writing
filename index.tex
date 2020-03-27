@@ -14,6 +14,8 @@
 \usepackage[explicit]{titlesec}
 \usepackage{hyperref}
 \usepackage{amsmath}
+\usepackage[nottoc]{tocbibind}
+\usepackage[english]{babel}
 
 \input{config.tex}
 
@@ -97,7 +99,12 @@
 
 \input{chapters/conclusions.tex}
 
-\input{chapters/bibliography.tex}
+%----------------------------------------------------------------------------------------
+%   BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\bibliographystyle{unsrt}
+\bibliography{sources}
 
 %----------------------------------------------------------------------------------------
 
